@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod
+  labels:
+    name: first
+    class: pod
+spec:
+  containers:
+  - name: c00
+    image: ubuntu
+    command: ["/bin/bash", "-c", "while true; do echo Hello; sleep 5 ; done"]
+  restartPolicy: Never

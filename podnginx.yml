@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test2
+spec:
+  containers:
+    - name: c00
+      image: nginx
+      command: ["/bin/bash","-c","while true; do echo hello; sleep 5; done"]
+      ports:
+        - containerPort: 80
